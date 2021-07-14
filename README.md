@@ -1,4 +1,4 @@
-# vue-packages-data
+# vuex-packages-info
 Data from API jsdelivr.com
 
 /SPA, на которой данные взяты данные с https://jsdelivr.com по средствам API https://github.com/jsdelivr/data.jsdelivr.com. 
