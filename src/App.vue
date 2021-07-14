@@ -22,15 +22,12 @@ export default {
   },
 };
 </script>
+
 <style lang="scss">
 #inspire {
   background: linear-gradient(to bottom, #008080 0%, #000000 101%);
 }
-.table_content {
-  margin: 0 auto;
-  text-align: center;
-  padding: 20px;
-}
+
 .positionApp {
   display: block;
   margin: 0 auto;

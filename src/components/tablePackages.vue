@@ -12,42 +12,43 @@
     </v-row>
     <v-row class="mainSection">
       <v-simple-table 
-        fixed-header 
-        dark
         dense 
-        class="table_content"
+        shaped
+        width="400px"
+        height="392px"
+        class="table-content"
       >
-          <template v-slot:default>
-              <thead>
-                  <tr>
-                    <th >
-                        <h2 class="table_content"> Package name </h2>
-                    </th>
-                    <th >
-                        <h2 class="table_content"> Type </h2>
-                    </th>
-                  </tr>
-              </thead>              
-              <tbody >
-                <tr
-                  class="trTable"
-                  v-for="(item, index) in paginatedTable"
-                  :key="index"
-                  :search="search"
-                  @click="getPackage(item)"
-                >
-                      <td>{{ item.name }}</td>
-                      <td>{{ item.type }}</td>
-                </tr>
-              </tbody>
-          </template>
+        <template v-slot:default>
+          <thead class="table-content_header">
+              <tr>
+                <th >
+                  <h2> Package name </h2>
+                </th>
+                <th >
+                  <h2> Type </h2>
+                </th>
+              </tr>
+          </thead>              
+          <tbody>
+            <tr
+              class="trTable"
+              v-for="(item, index) in paginatedTable"
+              :key="index"
+              :search="search"
+              @click="getPackage(item)"
+            >
+                  <td>{{ item.name }}</td>
+                  <td>{{ item.type }}</td>
+            </tr>
+          </tbody>
+        </template>
       </v-simple-table>
       
       <modal-window 
         class="modalWindow" 
         v-if="showModal" 
         :title="title"
-        :isType="isType"        
+        :isType="isType"
       >
       </modal-window>
     </v-row>
@@ -128,11 +129,10 @@ export default {
       this.pageNumber = page;
     },
     getPackage(item){
-      console.log(item);
       this.title = item.name;
       this.isType = item.type;
-      this.showModal = !this.showModal;
-    },
+      this.showModal = true;
+    }
    
   }
 };
@@ -140,6 +140,14 @@ export default {
 </script>
 
 <style>
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular.ttf");
+}
+* {
+  font-family: "Roboto";
+  color: #fff;
+}
 .page {
   padding: 10px;
   color: black;
@@ -149,24 +157,46 @@ export default {
   border-radius: 30%;
 }
 .page:hover {
-  background: rgb(17, 10, 10);
+  background: rgb(0 56 56);
   transition: 0.2s;
   color: white;
+  box-shadow: 0 0 10px #fff, 0 0 40px teal;
+  transition: 0.5s;
+  transition-delay: 0.04s;
 }
 .pageSelected {
   background: rgb(17, 10, 10);
   color: white;
 }
 .modalWindow{
-  max-width: 344px;
-  height: 300px;
-  overflow-y: scroll;
-}
-.trTable{
-  cursor: pointer;
+  background: rgb(0 56 56);
+  transition: 0.2s;
+  color: white;
+  box-shadow: 0 0 10px #fff, 0 0 40px teal;
+  transition: 0.5s;
+  transition-delay: 0.04s;
+  height: 392px;
 }
 .mainSection {
   display: flex;
   justify-content: space-between;
 }
+.mainSection > .theme--light.v-data-table {
+  background: rgb(0 56 56);
+  color: #fff;
+}
+.table-content {
+  max-width: 295px;
+  max-height: 392px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+}
+  .trTable{
+    cursor: pointer;
+  }
+  .trTable:hover{
+    cursor: pointer;
+    background: #eeeeee24;
+  }
 </style>
