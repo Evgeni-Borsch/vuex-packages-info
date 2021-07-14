@@ -23,10 +23,24 @@ export default {
 };
 </script>
 <style lang="scss">
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+*:-webkit-scrollbar-track{
+  -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+  background-color: #f9f9fd;
+  border-radius: 10px;
+}
+*::-webkit-scrollbar-thumb{
+  border-radius: 10px;
+  background: linear-gradient(180deg, #ffffff, teal);
+}
 #inspire {
   background: linear-gradient(to bottom, #008080 0%, #000000 101%);
 }
 .table_content {
+  margin: 0 auto;
   text-align: center;
   padding: 20px;
 }

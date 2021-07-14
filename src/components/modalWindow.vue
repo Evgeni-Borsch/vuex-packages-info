@@ -7,7 +7,7 @@
     >
       <v-expand-transition >
         <v-card
-          class="transition-fast-in-fast-out"
+          class="modal-card"
           dark
           shaped
           elevation="24"
@@ -15,7 +15,7 @@
           min-height="426px"
         >
           <v-card-text 
-            class="ModalCardText pb-0"
+            class="modal-card__text pb-0"
             text-sm-body-2
           >
             <h5 class="subtitle-1">
@@ -69,7 +69,8 @@ export default {
 </script>
 
 <style>
-.ModalCardText{
+.modal-card{
+  transition: 0.6s;
 }
 .aboutDownloads_versions{
   font-family: sans-serif;
