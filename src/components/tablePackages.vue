@@ -17,7 +17,7 @@
         dense 
         class="table_content"
       >
-          <template >
+          <template v-slot:default>
               <thead>
                   <tr>
                     <th >
@@ -161,7 +161,6 @@ export default {
   max-width: 344px;
   height: 300px;
   overflow-y: scroll;
-  transition-delay:0.6s
 }
 .trTable{
   cursor: pointer;
