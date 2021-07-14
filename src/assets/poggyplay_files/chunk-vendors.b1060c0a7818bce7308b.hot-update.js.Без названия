@@ -1,0 +1,42 @@
+webpackHotUpdate("chunk-vendors",{
+
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vuetify/src/components/VCard/VCard.sass":
+false,
+
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vuetify/src/components/VProgressLinear/VProgressLinear.sass":
+false,
+
+/***/ "./node_modules/vuetify/lib/components/VCard/VCard.js":
+false,
+
+/***/ "./node_modules/vuetify/lib/components/VCard/index.js":
+false,
+
+/***/ "./node_modules/vuetify/lib/components/VProgressLinear/VProgressLinear.js":
+false,
+
+/***/ "./node_modules/vuetify/lib/components/VProgressLinear/index.js":
+false,
+
+/***/ "./node_modules/vuetify/lib/components/transitions/createTransition.js":
+false,
+
+/***/ "./node_modules/vuetify/lib/components/transitions/expand-transition.js":
+false,
+
+/***/ "./node_modules/vuetify/lib/components/transitions/index.js":
+false,
+
+/***/ "./node_modules/vuetify/lib/mixins/loadable/index.js":
+false,
+
+/***/ "./node_modules/vuetify/lib/mixins/proxyable/index.js":
+false,
+
+/***/ "./node_modules/vuetify/src/components/VCard/VCard.sass":
+false,
+
+/***/ "./node_modules/vuetify/src/components/VProgressLinear/VProgressLinear.sass":
+false
+
+})
