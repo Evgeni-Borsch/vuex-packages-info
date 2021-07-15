@@ -1,5 +1,5 @@
 <template>
-  <v-container class="col-md-6">
+  <v-container class="col-md-4">
     <v-row>
       <v-text-field 
         dark
@@ -148,9 +148,11 @@ export default {
   font-family: "Roboto";
   color: #fff;
 }
+.container {
+  max-width: 700px;
+}
 .page {
   padding: 10px;
-  color: black;
   margin: 5px;
   cursor: pointer;
   text-align: center;
@@ -165,7 +167,7 @@ export default {
   transition-delay: 0.04s;
 }
 .pageSelected {
-  background: rgb(17, 10, 10);
+  background: rgb(0,53,53);
   color: white;
 }
 .modalWindow{
@@ -184,19 +186,48 @@ export default {
 .mainSection > .theme--light.v-data-table {
   background: rgb(0 56 56);
   color: #fff;
+  width: 295px;
 }
 .table-content {
   max-width: 295px;
   max-height: 392px;
-  margin: 0 auto;
   text-align: center;
   padding: 20px;
 }
-  .trTable{
-    cursor: pointer;
+.trTable{
+  cursor: pointer;
+}
+.trTable:hover{
+  cursor: pointer;
+  background: #eeeeee24;
+}
+
+
+@media (max-width: 1264px){
+  .container {
+    max-width: 700px;
   }
-  .trTable:hover{
-    cursor: pointer;
-    background: #eeeeee24;
+}
+@media (min-width: 960px){
+  .container {
+    max-width: 700px;
   }
+}
+@media (max-width: 750px){
+  .container {
+    max-width: 500px;
+  }
+  .mainSection > .theme--light.v-data-table {
+    margin: 20px auto;
+  }
+  .modalWindow{
+    margin: 0 auto;
+  }
+}
+@media (max-width: 550px){
+  .container {
+      max-width: 300px;
+  }
+
+}
 </style>

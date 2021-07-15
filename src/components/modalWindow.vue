@@ -16,7 +16,7 @@
               <h2>
                {{title}}  <span> ({{isType}}) </span> 
               </h2>
-              <img src="../assets/close.png" alt="close" width="10%" height="10%" class="close-btn" @click="this.$emit('closeModal')">
+              <img src="../assets/close.png" alt="close" class="close-btn" @click="this.$emit('closeModal')">
             </div>
               <p class="about-downloads__versions"> {{ info.total }} <span>downloads</span></p>
              
