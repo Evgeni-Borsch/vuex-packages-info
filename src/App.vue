@@ -35,7 +35,7 @@ export default {
 }
 *::-webkit-scrollbar-thumb{
   border-radius: 10px;
-  background: linear-gradient(180deg, #b1f6ff, teal);
+  background: linear-gradient(180deg, #b1f6ff, darkred);
 }
 #inspire {
   background: linear-gradient(to bottom, #008080 0%, #000000 101%);
@@ -47,5 +47,8 @@ export default {
 }
 .v-toolbar__content{
   justify-content: center
+}
+.theme--light.v-data-table > .v-data-table__wrapper > table > tbody > tr:hover:not(.v-data-table__expanded__content):not(.v-data-table__empty-wrapper){
+  background: darkred;
 }
 </style>

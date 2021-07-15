@@ -70,6 +70,7 @@
 <script>
 import {mapActions, mapGetters} from 'vuex';
 import modalWindow from './modalWindow'
+import { EventBus } from './EventBus';
 
 
 export default {
@@ -87,13 +88,14 @@ export default {
       isType: '',
       search: ''
     }
-
   },
   components: {
     modalWindow
   },
 
   mounted() {
+    document.querySelector(".mainSection > .theme--light.v-data-table").style.margin = '0 auto'
+    EventBus.$on('closeModal', (e)=>{ this.showModal = e });
     this.showDateInTable();
   },
   
@@ -101,6 +103,15 @@ export default {
     paginatedTable(newValue){
       if(newValue.length < 10){
         this.pageNumber = 1
+      }
+    },
+    showModal(){
+      try {
+        if(false === this.showModal){
+          document.querySelector(".mainSection > .theme--light.v-data-table").style.margin = '0 auto'
+        }
+      }catch(err){
+        console.error(err);
       }
     }
   },
@@ -167,7 +178,7 @@ export default {
   transition-delay: 0.04s;
 }
 .pageSelected {
-  background: rgb(0,53,53);
+  background: darkred;
   color: white;
 }
 .modalWindow{
@@ -197,18 +208,7 @@ export default {
 .trTable{
   cursor: pointer;
 }
-.trTable:hover{
-  cursor: pointer;
-  background: #eeeeee24;
-}
-
-
-@media (max-width: 1264px){
-  .container {
-    max-width: 700px;
-  }
-}
-@media (min-width: 960px){
+@media (max-width: 960px){
   .container {
     max-width: 700px;
   }
@@ -226,8 +226,7 @@ export default {
 }
 @media (max-width: 550px){
   .container {
-      max-width: 300px;
+    max-width: 300px;
   }
-
 }
 </style>
