@@ -1,6 +1,7 @@
 # vuex-packages-info
 Data from API jsdelivr.com
 # Демонстрация https://vuex-packages-info.vercel.app/
+![Screenshot_20210720_153213 (1)](https://user-images.githubusercontent.com/74211009/126324235-ffd50311-67cd-4c62-b1c9-67455f5fa15f.png)
 /SPA, на которой данные взяты данные с https://jsdelivr.com по средствам API https://github.com/jsdelivr/data.jsdelivr.com. 
 /Основное на странице:
     1)Сверху текстовое поле для поиска.
